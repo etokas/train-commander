@@ -24,6 +24,7 @@ set :shared_children,     [app_path + "/cache", app_path + "/logs", web_path + "
 set :writable_dirs, ["app/cache", "app/logs"]
 set :permission_method, :acl
 default_run_options[:pty] = true
+#set :update_vendors, true
 
 # Be more verbose by uncommenting the following line
 # logger.level = Logger::MAX_LEVEL
