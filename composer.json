@@ -21,7 +21,11 @@
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
-        "symfony/phpunit-bridge": "~2.7"
+        "symfony/phpunit-bridge": "~2.7",
+        "eightpoints/guzzle-bundle": "dev-master",
+        "friendsofsymfony/jsrouting-bundle": "^1.6",
+        "friendsofsymfony/user-bundle": "~2.0@dev",
+        "bmatzner/jquery-ui-bundle": "*"
     },
     "scripts": {
         "post-install-cmd": [
@@ -44,7 +48,7 @@
     "config": {
         "bin-dir": "bin",
         "platform": {
-            "php": "5.3.9"
+            "php": "5.5.9"
         }
     },
     "extra": {

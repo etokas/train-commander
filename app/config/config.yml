@@ -2,6 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@FrontBundle/Resources/config/services.yml" }
+
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -78,3 +80,19 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+
+fos_user:
+    db_driver:     orm
+    firewall_name: main
+    user_class: FrontBundle\Entity\User
+    registration:
+        form:
+            type: FrontBundle\Form\UserType
+
+guzzle:
+    clients:
+        api_crm:
+            base_url: "https://microsoft-apiapp8e4c01653956482183a83076bcb4e9f9.azurewebsites.net/api/trajet"
+            headers:
+                Accept: "application/json"

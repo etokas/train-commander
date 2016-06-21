@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <title>Contact app</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerjqueryui/css/smoothness/jquery-ui.css') }}"/>
+    <link rel="stylesheet" type="text/css"
+          href="{{ asset('bundles/bmatznerjqueryui/css/smoothness/jquery.ui.theme.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/front/css/bootstrap.min.css') }}">
+    <link href="{{ asset('bundles/front/css/main.css') }}" rel="stylesheet">
+
+    <!-- pour les logos twitter -->
+    <link rel="stylesheet" href="{{ asset('bundles/front/css/bootstrap-social.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/front/css/font-awesome.min.css') }}">
+
+
+</head>
+<body>
+
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '1740802876167332',
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ path('front_homepage') }}">EasyTrain</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <li>
+                        <a href="{{ path('fos_user_profile_show') }}">Bonjour {{ app.user.prenom | capitalize }} !</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{{ path('fos_user_security_login') }}">Connexion</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="section">
+    <section class="main">
+        <div class="container">
+            {% block container %}
+                <div id="hide-search" class="col-sm-4 col-sm-offset-1">
+                    <div class="form-box">
+                        <form id="form-search">
+                            <h3>Quel est votre trajet?</h3>
+
+
+                            <div class="form-group ">
+                                <input name="departure" type="text" id="departure" placeholder="Départ"
+                                       class="required form-control input-sm">
+                            </div>
+
+
+                            <div class="form-group ">
+                                <input type="text" name="arrival" id="arrival" placeholder="Arrivée"
+                                       class="required form-control input-sm">
+                            </div>
+
+
+                            <div class="form-group ">
+                                <label for="dateDepart">Aller le *</label>
+                                <input type="text" name="dateDepart" id="date" placeholder="1-01-1970"
+                                       class="required form-control input-sm">
+                            </div>
+                            <div>
+                                <label for="timeDepart">Entre</label>
+                                <select name="timeDepart" id="time-depart" style=" width: 50px">
+                                    <option value="06">6</option>
+                                    <option value="08">8</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                    <option value="18">18</option>
+                                    <option value="20">20</option>
+                                    <option value="22">22</option>
+                                </select>
+
+                                <label for="timeArrival">Et</label>
+                                <select name="timeArrival" id="time-arrival">
+                                    <option value="06">6</option>
+                                    <option value="08">8</option>
+                                    <option value="10">10</option>
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                    <option value="18">18</option>
+                                    <option value="20">20</option>
+                                    <option value="22">22</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-success" value="Rechercher">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="show-hide" class="col-sm-5 col-sm-offset-1">
+                    <div class="itineraire"></div>
+                    <div class="section-resultat">
+                        <div id="voyages">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden col-sm-4 col-sm-offset-1 detail-voyage">
+
+                </div>
+
+
+                {#<div class="col-sm-8">
+                    <div class="block">
+                        <p>
+                        <h1>Bienvenue sur easyTrain</h1>
+                        </br>
+                        Le Lorem Ipsum est simplement du faux texte </br>
+                        employé dans la composition et la mise en page </br>
+                        avant impression. Le Lorem Ipsum
+                        Le Lorem Ipsum est simplement du faux texte </br>
+                        employé dans la composition et la mise en page </br>
+                        avant impression. Le Lorem Ipsum
+
+                        </p>
+
+                    </div>
+                </div>#}
+
+                <img class="loading hidden" src="/bundles/front/img/load.gif">
+                <span id="aucun-voyage" class="hidden"></span>
+
+
+            {% endblock container %}
+        </div>
+    </section>
+</div>
+
+<!-- footer -->
+<div id="footer" class="navbar-fixed-bottom">
+    <div class="container">
+        <p>Train commander &copy; 2016</p>
+    </div>
+</div>
+
+</body>
+<script src="{{ asset('bundles/front/js/jquery.js') }}"></script>
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/bmatznerjqueryui/js/minified/jquery-ui.min.js') }}"></script>
+<script src="{{ asset('bundles/front/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/front/js/main.js') }}"></script>
+<script src="{{ asset('assets/vendor/jquery.fblogin/dist/jquery.fblogin.js') }}"></script>
+<script src="{{ asset('bundles/front/js/paypal.js') }}"></script>
+</html>
+

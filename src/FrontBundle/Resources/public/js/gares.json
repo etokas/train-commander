@@ -1,0 +1,356 @@
+[
+  {
+    "GareId": 301,
+    "VilleId": 234,
+    "NomGare": "Gare de Calais-Ville",
+    "NomVille": "Calais"
+  },
+  {
+    "GareId": 302,
+    "VilleId": 235,
+    "NomGare": "Gare de Dunkerque",
+    "NomVille": "Dunkerque"
+  },
+  {
+    "GareId": 303,
+    "VilleId": 236,
+    "NomGare": "Gare de Lille-Europe",
+    "NomVille": "Lille"
+  },
+  {
+    "GareId": 304,
+    "VilleId": 236,
+    "NomGare": "Gare Lille Flandre",
+    "NomVille": "Lille"
+  },
+  {
+    "GareId": 305,
+    "VilleId": 237,
+    "NomGare": "Gare de Valentiennes",
+    "NomVille": "Valentiennes"
+  },
+  {
+    "GareId": 306,
+    "VilleId": 238,
+    "NomGare": "Gare de Arras",
+    "NomVille": "Arras"
+  },
+  {
+    "GareId": 307,
+    "VilleId": 239,
+    "NomGare": "Gare de Amiens",
+    "NomVille": "Amiens"
+  },
+  {
+    "GareId": 308,
+    "VilleId": 240,
+    "NomGare": "Gare de Rouen Rive Droite",
+    "NomVille": "Rouen"
+  },
+  {
+    "GareId": 309,
+    "VilleId": 241,
+    "NomGare": "Gare du Havre",
+    "NomVille": "Le Havre"
+  },
+  {
+    "GareId": 310,
+    "VilleId": 242,
+    "NomGare": "Gare de Caen",
+    "NomVille": "Caen"
+  },
+  {
+    "GareId": 311,
+    "VilleId": 243,
+    "NomGare": "Gare de evreux-Normandie",
+    "NomVille": "Evreux"
+  },
+  {
+    "GareId": 312,
+    "VilleId": 244,
+    "NomGare": "Gare du Mans",
+    "NomVille": "Le Mans"
+  },
+  {
+    "GareId": 313,
+    "VilleId": 245,
+    "NomGare": "Gare de Rennes",
+    "NomVille": "Rennes"
+  },
+  {
+    "GareId": 314,
+    "VilleId": 246,
+    "NomGare": "Gare de Brest",
+    "NomVille": "Brest"
+  },
+  {
+    "GareId": 315,
+    "VilleId": 247,
+    "NomGare": "Gare de Lorient",
+    "NomVille": "Lorient"
+  },
+  {
+    "GareId": 316,
+    "VilleId": 248,
+    "NomGare": "Gare de Anger-Saint-Laud",
+    "NomVille": "Anger"
+  },
+  {
+    "GareId": 317,
+    "VilleId": 249,
+    "NomGare": "Gare de Nantes",
+    "NomVille": "Nantes"
+  },
+  {
+    "GareId": 318,
+    "VilleId": 250,
+    "NomGare": "Gare SNCF de Tours",
+    "NomVille": "Tours"
+  },
+  {
+    "GareId": 319,
+    "VilleId": 223,
+    "NomGare": "Gare de Strasbourg-Ville",
+    "NomVille": "Strasbourg"
+  },
+  {
+    "GareId": 320,
+    "VilleId": 224,
+    "NomGare": "Gare de Metz-Ville",
+    "NomVille": "Metz"
+  },
+  {
+    "GareId": 321,
+    "VilleId": 225,
+    "NomGare": "Gare SNCF de Nancy",
+    "NomVille": "Nancy"
+  },
+  {
+    "GareId": 322,
+    "VilleId": 226,
+    "NomGare": "Gare de Reims",
+    "NomVille": "Reims"
+  },
+  {
+    "GareId": 323,
+    "VilleId": 227,
+    "NomGare": "Gare de Mulhouse-Ville",
+    "NomVille": "Mulhouse"
+  },
+  {
+    "GareId": 324,
+    "VilleId": 228,
+    "NomGare": "Gare de Montbéliard",
+    "NomVille": "Montbéliard"
+  },
+  {
+    "GareId": 325,
+    "VilleId": 229,
+    "NomGare": "Gare de Besançon-Viotte",
+    "NomVille": "Besançon"
+  },
+  {
+    "GareId": 326,
+    "VilleId": 230,
+    "NomGare": "Gare de Dijon-Ville",
+    "NomVille": "Dijon"
+  },
+  {
+    "GareId": 327,
+    "VilleId": 231,
+    "NomGare": "Gare de Nevers",
+    "NomVille": "Nevers"
+  },
+  {
+    "GareId": 328,
+    "VilleId": 232,
+    "NomGare": "Gare SNCF de Bourges",
+    "NomVille": "Bourges"
+  },
+  {
+    "GareId": 329,
+    "VilleId": 233,
+    "NomGare": "Gare de Orléans",
+    "NomVille": "Orléans"
+  },
+  {
+    "GareId": 330,
+    "VilleId": 213,
+    "NomGare": "Gare de Poitiers",
+    "NomVille": "Poitiers"
+  },
+  {
+    "GareId": 331,
+    "VilleId": 214,
+    "NomGare": "Gare de Limoges-Bénédictins",
+    "NomVille": "Limoges"
+  },
+  {
+    "GareId": 332,
+    "VilleId": 215,
+    "NomGare": "Gare de Angoulême",
+    "NomVille": "Angoulême"
+  },
+  {
+    "GareId": 333,
+    "VilleId": 216,
+    "NomGare": "Gare de Brive-la-Gaillarde",
+    "NomVille": "Brive-la-Gaillarde"
+  },
+  {
+    "GareId": 334,
+    "VilleId": 217,
+    "NomGare": "Gare de Bordeaux-Saint-Jean",
+    "NomVille": "Bordeaux"
+  },
+  {
+    "GareId": 335,
+    "VilleId": 218,
+    "NomGare": "Gare Montauban-Ville-Bourbon",
+    "NomVille": "Montauban"
+  },
+  {
+    "GareId": 336,
+    "VilleId": 219,
+    "NomGare": "Gare de Toulouse-Matabiau",
+    "NomVille": "Toulouse"
+  },
+  {
+    "GareId": 337,
+    "VilleId": 220,
+    "NomGare": "Gare de Pau",
+    "NomVille": "Pau"
+  },
+  {
+    "GareId": 338,
+    "VilleId": 221,
+    "NomGare": "Gare de Bayonne",
+    "NomVille": "Bayonne"
+  },
+  {
+    "GareId": 339,
+    "VilleId": 222,
+    "NomGare": "Gare de Perpignan",
+    "NomVille": "Perpignan"
+  },
+  {
+    "GareId": 340,
+    "VilleId": 205,
+    "NomGare": "Gare de Clermont-Ferrand",
+    "NomVille": "Clermont-Ferrand"
+  },
+  {
+    "GareId": 341,
+    "VilleId": 202,
+    "NomGare": "Gare de Lyon Part-Dieu",
+    "NomVille": "Lyon"
+  },
+  {
+    "GareId": 342,
+    "VilleId": 202,
+    "NomGare": "Gare de Lyon-Perrache",
+    "NomVille": "Lyon"
+  },
+  {
+    "GareId": 343,
+    "VilleId": 202,
+    "NomGare": "Gare Saint-Paul",
+    "NomVille": "Lyon"
+  },
+  {
+    "GareId": 344,
+    "VilleId": 206,
+    "NomGare": "Gare de Saint-Etienne-Châteaucreux",
+    "NomVille": "Saint-Etienne"
+  },
+  {
+    "GareId": 345,
+    "VilleId": 207,
+    "NomGare": "Gare de Chambery-Charles-les-Eaux",
+    "NomVille": "Chambery"
+  },
+  {
+    "GareId": 346,
+    "VilleId": 204,
+    "NomGare": "Gare de Grenoble",
+    "NomVille": "Grenoble"
+  },
+  {
+    "GareId": 347,
+    "VilleId": 208,
+    "NomGare": "Gare de Valence-Ville",
+    "NomVille": "Valence"
+  },
+  {
+    "GareId": 348,
+    "VilleId": 209,
+    "NomGare": "Gare de Nice-Ville",
+    "NomVille": "Nice"
+  },
+  {
+    "GareId": 349,
+    "VilleId": 210,
+    "NomGare": "Gare de Nîmes",
+    "NomVille": "Nimes"
+  },
+  {
+    "GareId": 350,
+    "VilleId": 211,
+    "NomGare": "Gare de Toulon",
+    "NomVille": "Toulon"
+  },
+  {
+    "GareId": 351,
+    "VilleId": 203,
+    "NomGare": "Gare de Marseille Saint-Charles",
+    "NomVille": "Marseille"
+  },
+  {
+    "GareId": 352,
+    "VilleId": 212,
+    "NomGare": "Gare de Montpellier Saint-Roch",
+    "NomVille": "Montpellier"
+  },
+  {
+    "GareId": 353,
+    "VilleId": 201,
+    "NomGare": "Gare de Lyon",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 354,
+    "VilleId": 201,
+    "NomGare": "Gare Montparnasse",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 355,
+    "VilleId": 201,
+    "NomGare": "Gare du Nord",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 356,
+    "VilleId": 201,
+    "NomGare": "Gare Saint-Lazare",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 357,
+    "VilleId": 201,
+    "NomGare": "Gare de l'Est",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 358,
+    "VilleId": 201,
+    "NomGare": "Gare de Bercy",
+    "NomVille": "Paris"
+  },
+  {
+    "GareId": 359,
+    "VilleId": 201,
+    "NomGare": "Gare de Austerlitz",
+    "NomVille": "Paris"
+  }
+]

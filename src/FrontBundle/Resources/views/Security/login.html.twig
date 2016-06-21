@@ -1,0 +1,51 @@
+{% extends "FrontBundle::layout.html.twig" %}
+
+
+{% block container %}
+    <section class="container">
+        <section class="login-form">
+            <section>
+                <h4>Connectez-vous</h4>
+            </section>
+
+            <form id="login" action="{{ path("fos_user_security_check") }}" method="post">
+                <!--img src="" alt=""-->
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+                <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Votre email"
+                       class="form-control input-lg"/>
+
+                <input type="password" id="password" name="_password" required="required" placeholder="Mot de passe"
+                       class="form-control input-lg"/>
+
+                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                <label for="remember_me">Se souvenir de moi ?</label>
+
+                <button type="submit" id="_submit" name="_submit" class="btn btn-success btn-block">Se connecter</button>
+
+                <a href="#" class="pull-right">Besoin d'aide?</a>
+            </form>
+
+            <section>
+                <a href="{{ path('fos_user_registration_register') }}">Créer un compte</a>
+            </section>
+            <section>
+                <a class="btn btn-block btn-social btn-facebook" id="loginbutton">
+                    <span class="fa fa-facebook"></span>
+                   Se connecter avec Facebook
+                </a>
+
+                <h5>Ou</h5>
+
+                <a class="btn btn-block btn-social btn-google" id="loginbutton">
+                    <span class="fa fa-google"></span>
+                   Se connecter avec Google
+                </a>
+
+
+            </section>
+        </section>
+    </section>
+
+{% endblock container %}
+

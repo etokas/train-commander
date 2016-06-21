@@ -1,0 +1,44 @@
+{% extends "FrontBundle::layout.html.twig" %}
+
+
+{% block container %}
+
+    <section class="container">
+        <section class="login-form">
+            <section>
+                <h4>S'enregistrer</h4>
+            </section>
+
+            <form method="post" action="#" id="login">
+                <!--img src="" alt=""-->
+                Image a venir
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+
+                <input type="text" id="name" name="name" required="required" placeholder="Votre nom" class="form-control input-lg">
+
+                <input type="text" id="lastname" name="lastname" required="required" placeholder="Votre prenom" class="form-control input-lg">
+
+                <input type="text" id="email" name="email" required="required" placeholder="Votre email" class="form-control input-lg">
+
+                <input type="password" id="password" name="password" required="required" placeholder="Mot de passe" class="form-control input-lg">
+
+                <input type="password" id="re-password" name="new-password" required="required" placeholder="Retapez le mot de passe" class="form-control input-lg">
+
+                <button type="submit" id="submit" name="_submit" class="btn btn-success btn-block">S'enregistrer</button>
+
+
+                <a href="#" class="pull-right">Besoin d'aide?</a>
+            </form>
+
+            <section>
+                <button type="submit" name="go" class="btn btn-block btn-primary">Se connecter via Facebook</button>
+                <h5>Ou</h5>
+
+                <button type="submit" name="go" class="btn btn-block btn-danger">Se connecter via Google</button>
+            </section>
+        </section>
+    </section>
+
+
+
+{% endblock container %}

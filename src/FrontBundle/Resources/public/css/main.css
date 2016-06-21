@@ -1,0 +1,649 @@
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #E5E6EA;
+    background-image: url("../img/sunset.jpg"); /* le background*/
+
+}
+
+/*message sur la page d'acceuil */
+.welcome {
+
+    color: #555;
+}
+
+/*bloc a gauche du text*/
+
+.block {
+    color: #555;
+    width: 600px;
+    height: 400px;
+    background-color: transparent;
+    padding: 0px 10px 200px 100px;
+    margin-top: -19px;
+    margin-left: 150px;
+}
+
+/*champ select des heures*/
+
+select#time-arrival {
+    width: 50px;
+}
+
+.mywell {
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 1px #CCC;
+    border: 1px solid #E9E9E9;
+    border-bottom: 0;
+}
+
+h1, h2 {
+    font-weight: normal !important;
+}
+
+.col-centered {
+    display: inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -4px;
+}
+
+.recherche-form {
+
+}
+
+/*.form-box input[type="text"] {
+    border-radius: 5px 5px 0 0;
+    text-transform: lowercase;
+}*/
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border: 1px solid #ccc;
+    /*background: #fafafa;*/
+    transition: 0.2s ease-in-out;
+}
+
+/*.form-box input[name="arrival"] {
+    border-radius: 0 0 5px 5px;
+    border-top: 0;
+} */
+
+.form-search {
+    display: inline-block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-inverse .navbar-brand {
+    font-family: Zapf Chancery, cursive;
+    font-weight: bold;
+    color: #5cb85c;
+}
+
+#hide-search {
+    color: #555;
+    background: #f7f7f7;
+    padding: 40px;
+    margin-top: 65px;
+    -webkit-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+}
+
+.form-inline {
+    display: inline-block;
+}
+
+.container {
+    /*  width: 850px; */
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.error {
+    color: #C82829;
+}
+
+#voyages {
+    margin-top: 20px;
+}
+
+.details-details, .span-price {
+    border: 1px solid;
+    font-size: 20px;
+    margin: 10px auto;
+}
+
+#show-hide {
+    /*background-color: #fff;*/
+    border-radius: 5px;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+/* Inner */
+.popup-inner {
+    max-width: 700px;
+    width: 90%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 1);
+    border-radius: 3px;
+    background: #fff;
+}
+
+/* Close Button */
+.popup-close {
+    width: 30px;
+    height: 30px;
+    padding-top: 4px;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: ease 0.25s all;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    border-radius: 1000px;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    text-align: center;
+    line-height: 100%;
+    color: #fff;
+}
+
+.popup-close:hover {
+    -webkit-transform: translate(50%, -50%) rotate(180deg);
+    transform: translate(50%, -50%) rotate(180deg);
+    background: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.login-form {
+    margin: 50px auto;
+    max-width: 360px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.login-form > section {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form > section img {
+    margin-bottom: 20px;
+}
+
+/*.login-form > section a {
+    color: #657fed;
+}*/
+
+.login-form h4 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #737373;
+    margin-bottom: 20px;
+}
+
+form[id=login] {
+    font: 15px/2.2em Lato, serif;
+    color: #555;
+    background: #f7f7f7;
+    padding: 40px;
+
+    -webkit-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+    box-shadow: 0 3px 3px 0 rgba(50, 50, 50, 0.2);
+}
+
+form[id=login] img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+form[id=login] input,
+form[id=login] button {
+    font-size: 17px;
+}
+
+form[id=login] input {
+    color: #989898;
+    background: #fff;
+    border: 1px solid #c0c0c0;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    z-index: 999;
+}
+
+form[id=login] input:focus {
+    z-index: 1000;
+}
+
+form[id=login] input[type=email] {
+    margin-bottom: -1px;
+}
+
+form[id=login] input::-webkit-input-placeholder {
+    color: #c0c0c0;
+}
+
+form[id=login] input:-moz-placeholder {
+    color: #c0c0c0;
+}
+
+form[id=login] input::-moz-placeholder {
+    color: #c0c0c0;
+}
+
+form[id=login] input:-ms-input-placeholder {
+    color: #c0c0c0;
+}
+
+form[id=login] button {
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #4082ef;
+    border: 1px solid;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    -webkit-box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, .3);
+    -moz-box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, .3);
+    box-shadow: inset 0 1px 2px 0 rgba(255, 255, 255, .3);
+}
+
+/* Footer Center */
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    background-color: #101010;
+}
+
+.no-user {
+    text-align: center;
+}
+
+.reserver {
+    margin: 30px auto;
+    height: 50px;
+    font-size: 20px;
+}
+
+.navbar-inverse .navbar-brand {
+    font-family: Zapf Chancery, cursive;
+    font-weight: bold;
+    color: #5cb85c;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+.titre-voyage {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.price .details-details {
+    background-color: #75c280;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.detail-voyage {
+    padding: 0px 10px;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 400px;
+    height: 600px;
+    overflow: hidden;
+    width: 90%;
+    margin-left: 50px;
+    margin-top: 0px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.detail-voyage.active {
+    height: auto;
+    opacity: 1;
+    margin-top: 95px;
+}
+
+.loading {
+    vertical-align: middle;
+    top: 25%;
+    left: 35%;
+    position: absolute;
+    width: 400px;
+}
+
+.bloc-voyages{
+    display: inline-block;
+    max-width: 500px;
+    border-radius: 5px;
+    height: 400px;
+    overflow:auto;
+    width: 90%;
+}
+.single-voyages{
+    border-bottom:2px #bbbbbb solid;
+    padding: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+
+}
+.single-voyages:last-child{
+    border-bottom:0px #bbbbbb solid;
+
+}
+.single-voyages:hover{
+    background-color: #fcfcfd;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+}
+
+.single-voyages > div{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin:0px 10%;
+}
+
+.single-voyages .detail{
+    font-size: 16px;
+    text-align: center;
+}
+.single-voyages .detail > *{
+    margin:0px 1px;
+}
+
+.single-voyages .estimate-time{
+    text-align: center;
+}
+.single-voyages .estimate-time .time{
+    font-size: 14px;
+    color: #999;
+}
+.single-voyages .estimate-time .jauge{
+    display: block;
+    border-radius: 30px;
+    height: 7px;
+    width: 50px;
+    background-color: #fff;
+    border:2px #eee solid;
+    margin: 3px auto;
+
+}
+
+
+.price .details-details{
+    background-color: #75c280;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.hidden{
+    display: none !important;
+}
+
+.titre-voyage{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.recapitulatif {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+}
+
+.recapitulatif .info-voyageur p {
+
+    font-size: 11px;
+}
+
+.recapitulatif .sub-block {
+    border-radius: 4px;
+    border: 1.5px #ccc solid;
+    padding: 5px;
+    background-color: #fcfcfd;
+    margin: 5px auto;
+}
+
+.recapitulatif .sub-block .hight-light {
+    color: #efa66b;
+    text-transform: capitalize;
+}
+
+.recapitulatif .sub-block p {
+    margin: 3px 0px;
+}
+
+.recapitulatif .date {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 18px;
+    color: #8d9097;
+    line-height: 16px;
+
+}
+
+.recapitulatif .itineraire {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    margin-right: 20px;
+
+}
+
+.recapitulatif .itineraire p {
+}
+
+.recapitulatif .itineraire p .time {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.recapitulatif .info-place {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: left;
+    margin-left: 0px;
+    margin-top: 10px;
+
+}
+
+.prix {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+
+.prix strong {
+    color: #efa66b;
+}
+
+.pay-button {
+    display: block;
+    width: 100px;
+    text-align: center;
+    padding: 10px 10px;
+    color: #fff;
+    background-color: #7ac084;
+    border: none;
+    border-radius: 4px;
+    margin: 15px auto;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.detail-voyage {
+    margin-left: auto;
+    margin-top: 50px;
+}
+
+.footer-distributed .footer-center i {
+    margin-left: 0;
+}
+
+@media (max-width:900px){
+    .detail-voyage{
+        margin-left:auto;
+        margin-top: 50px;
+
+    }
+}
+
+.detail-voyage .info-part h4 {
+    text-align: left;
+    color: #999;
+}
+
+.detail-voyage .sub-part {
+    display: inline-block;
+    background-color: #fcfcfd;
+    border: 1px #cccccc solid;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90%;
+    font-size: 14px;
+    text-align: left;
+}
+
+.detail-voyage .sub-part .hour {
+    color: #eb8019;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+#add_checkout {
+    margin: 20px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(117, 194, 128);
+    color: rgb(255, 255, 255);
+    box-shadow: none;
+}
+
+#aucun-voyage{
+    text-align: center;
+    vertical-align: middle;
+    top: 25%;
+    left: 35%;
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    border: 1px solid;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 3px 0;
+    background-color: #fcfcfc;
+}
+
+
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+@media (max-width: 750px) {
+    h4 {
+        font-size: 13px;
+    }
+
+    .recapitulatif .info-billet {
+        text-align: center;
+    }
+
+    .recapitulatif .info-place {
+        text-align: center;
+        margin: auto;
+        border-top: 1px #ccc solid;
+        padding: 0px 10px;
+        padding-top: 5px;
+        margin-top: 5px;
+
+    }
+
+    .recapitulatif .itineraire {
+        text-align: center;
+        font-size: 11px;
+
+    }
+
+    .recapitulatif .date {
+
+        font-size: 15px;
+    }
+}
