@@ -19,7 +19,12 @@ class Voyage
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $trajetId;
+    private $id;
+
+    /**
+     * @ORM\Column(name="trajet_id", type="integer")
+     */
+    private $TrajetId;
 
     /**
      * @ORM\Column(name="type_train", type="string")
@@ -42,12 +47,12 @@ class Voyage
     private $GareArrivee;
 
     /**
-     * @ORM\Column(name="first_correspondance", type="integer")
+     * @ORM\Column(name="first_correspondance", type="integer", nullable=true)
      */
     private $TrajetPremiereCorrespondance;
 
     /**
-     * @ORM\Column(name="second_correspondance", type="string")
+     * @ORM\Column(name="second_correspondance", type="string", nullable=true)
      */
     private $TrajetDeuxiemeCorrespondance;
 
@@ -87,15 +92,7 @@ class Voyage
     private $VilleArriveeId;
 
 
-    /**
-     * Get trajetId
-     *
-     * @return integer
-     */
-    public function getTrajetId()
-    {
-        return $this->trajetId;
-    }
+
 
     /**
      * Set typeTrain
@@ -407,5 +404,39 @@ class Voyage
     public function getVilleArriveeId()
     {
         return $this->VilleArriveeId;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set trajetId
+     *
+     * @param integer $trajetId
+     *
+     * @return Voyage
+     */
+    public function setTrajetId($trajetId)
+    {
+        $this->TrajetId = $trajetId;
+
+        return $this;
+    }
+
+    /**
+     * Get trajetId
+     *
+     * @return integer
+     */
+    public function getTrajetId()
+    {
+        return $this->TrajetId;
     }
 }

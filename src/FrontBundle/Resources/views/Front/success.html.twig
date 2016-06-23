@@ -1,0 +1,14 @@
+{% extends "FrontBundle::layout.html.twig" %}
+
+
+{% block container %}
+    <section class="container">
+        <div class="payment" id="aucun-voyage" style="margin-left: -200px;">
+            Votre paiement a été effectué avec succès
+            <div class="mail">Vous allez recevoir une confirmation sur votre email -> {{ commande.user.email }}</div>
+
+        </div>
+    </section>
+
+{% endblock container %}
+

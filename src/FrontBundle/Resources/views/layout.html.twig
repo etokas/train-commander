@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <title>Contact app</title>
+    <title>EasyTrain - Site de reservation de billet</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('bundles/bmatznerjqueryui/css/smoothness/jquery-ui.css') }}"/>
     <link rel="stylesheet" type="text/css"
@@ -64,7 +64,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <li>
-                        <a href="{{ path('fos_user_profile_show') }}">Bonjour {{ app.user.prenom | capitalize }} !</a>
+                        <a href="{{ path('fos_user_profile_show') }}">Bonjour {{ app.user.nom | capitalize }} !</a>
                     </li>
                     <li>
                         <a href="{{ path('fos_user_security_logout') }}">Deconnexion</a>
@@ -138,6 +138,17 @@
                                 <input type="submit" class="btn btn-success" value="Rechercher">
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <div id="accroche" class="col-sm-6 col-sm-offset-1">
+                    <h3>La grande vitesse en toute sécurité, notre coeur de metier</h3>
+                    <div class="content">
+                        Réserver vos billets de train n'a jamais été aussi facile avec EasyTrain
+                        Votre temps est mis en service de l'éfficacité.
+                        <div class="second-bottom">
+                            - Et si vous liez vitesse, sécurité et ponctualité à moindre coût ?
+                        </div>
                     </div>
                 </div>
 

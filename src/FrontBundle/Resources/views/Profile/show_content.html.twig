@@ -22,7 +22,11 @@
                         <th>Actions</th>
                     </tr>
                     <tr>
-                        {% for i in 0..4 %}
+                        {% for commande in app.user.commandes %}
+                            <td>{{ commande.voyage.GareDepart }}</td>
+                            <td>{{ commande.voyage.GareArrivee }}</td>
+                            <td>{{ commande.voyage.HeureDepart }}</td>
+                            <td>{{ commande.voyage.HeureArrivee }}</td>
                             <td>Test</td>
                         {% endfor %}
                     </tr>

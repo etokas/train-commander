@@ -21,7 +21,8 @@ class AppKernel extends Kernel
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Bmatzner\JQueryUIBundle\BmatznerJQueryUIBundle(),
-            new EightPoints\Bundle\GuzzleBundle\GuzzleBundle()
+            new EightPoints\Bundle\GuzzleBundle\GuzzleBundle(),
+            new HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

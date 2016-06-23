@@ -2,6 +2,8 @@
 
 namespace FrontBundle\Controller;
 
+use FrontBundle\Entity\Commande;
+use FrontBundle\Entity\User;
 use FrontBundle\Entity\Voyage;
 use GuzzleHttp\Client;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -9,6 +11,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /**
  * Class FrontController
@@ -23,6 +26,20 @@ class FrontController extends Controller
     {
 
         return $this->render('FrontBundle::layout.html.twig');
+    }
+
+
+    /**
+     * @Route("/ajax/voyage/{id}", name="get_voyage_ajax", options={"expose"=true})
+     */
+    public function getVoyageAjax($id)
+    {
+        /** @var Session $session */
+        $session = $this->get('session');
+
+        $session->set('id_voyage', $id);
+
+        return new JsonResponse($id);
     }
 
 
@@ -88,15 +105,6 @@ class FrontController extends Controller
         return new JsonResponse($response);
     }
 
-    /**
-     * @param Request $request
-     * @param $id
-     * @return JsonResponse
-     */
-    public function reservationAction(Request $request, $id)
-    {
-        return new JsonResponse();
-    }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
@@ -108,9 +116,9 @@ class FrontController extends Controller
 
         $em = $this->getDoctrine()->getManager();
 
-        $voy = $em->getRepository("FrontBundle:Voyage")->find($id);
+        $voy = $em->getRepository("FrontBundle:Voyage")->findOneBy(array('TrajetId' => $id));
 
-        if($voy){
+        if ($voy) {
             return $this->render('FrontBundle:Front:checkout.html.twig', ['voyage' => $voy]);
         }
 
@@ -138,6 +146,48 @@ class FrontController extends Controller
 
 
         return $this->render('FrontBundle:Front:checkout.html.twig', ['voyage' => $entity]);
+    }
+
+    /**
+     * @Route("/payment/success", name="success_payment")
+     */
+    public function successAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $session = $this->get('session');
+        $id = $session->get('id_voyage');
+        /** @var User $user */
+        $user = $this->getUser();
+
+        $voyage = $em->getRepository('FrontBundle:Voyage')->findOneBy(array('TrajetId' => (int)$id));
+
+        $commande = new Commande();
+
+        $commande->setVoyage($voyage);
+
+        $commande->setUser($user);
+
+        $user->addCommande($commande);
+
+
+        $em->persist($user);
+        $em->persist($commande);
+
+        $em->flush();
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Confirmation d\'achat')
+            ->setFrom('leslie.monema@gmail.com', 'EasyTrain')
+            ->setTo($user->getEmail(), sprintf('%s %s', $user->getNom(), $user->getPrenom()))
+            ->setBody(
+                $this->render(
+                    'FrontBundle:Front:email.html.twig', array('user' => $user, 'voyage' => $voyage)),
+                'text/html'
+            );
+        $this->get('mailer')->send($message);
+
+        return $this->render('FrontBundle:Front:success.html.twig', ['commande' => $commande]);
     }
 
 

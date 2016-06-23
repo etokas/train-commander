@@ -26,8 +26,14 @@ class UserType extends AbstractType
         return 'fos_user_registration';
     }
 
-    public function getName()
+    public function getBlockPrefix()
     {
         return 'app_user_registration';
+    }
+
+    // For Symfony 2.x
+    public function getName()
+    {
+        return $this->getBlockPrefix();
     }
 }

@@ -239,7 +239,7 @@ $(document).ready(function () {
 
             "<h4>Temps de trajet  " + $(this).find(".time").text() + " </h4> " +
 
-            "<a id='add_checkout' class='price button' href='http://commander.io/app_dev.php/checkout/" + parseInt(id) +"'>Ajouter au panier </a>" +
+            "<a id='add_checkout' class='price button' href='http://commander.io/app_dev.php/checkout/" + parseInt(id) + "'>Ajouter au panier </a>" +
 
             "</div>");
 
@@ -249,7 +249,23 @@ $(document).ready(function () {
 
         var id_voyage = localStorage.getItem('id_voyage');
 
-        window.location.href = 'http://commander.io/app_dev.php/checkout' + id_voyage;
+        window.location.href = 'http://commander.io/app_dev.php/checkout/' + id_voyage;
+
+    });
+
+    $('#pay').click(function (e) {
+
+        var id_voyage = localStorage.getItem('id_voyage');
+
+        $.ajax({
+            url: Routing.generate('get_voyage_ajax', { id: parseInt(id_voyage)}),
+            success: function (data) {
+
+                console.log('id recuperé est : ' + data)
+            }
+        });
+
+        console.log('click nigga ... avec ' + id_voyage);
 
     });
 
@@ -312,6 +328,7 @@ function reset() {
     $(".error").remove();
     $(".itineraire").html("");
     $("#voyages").empty();
+    $("#accroche").addClass("hidden");
 
 }
 function isEmpty() {
@@ -338,7 +355,7 @@ if ($(".information").is(":visible")) {
             $('.information-user').append(
                 "<h3>Informations</h3>" +
                 "<p> Nom : " + data.nom + "</p>" +
-                "<p> Prenom : " + data.prenom + "</p>" +
+                "<p> Prenom : " + data.nom + "</p>" +
                 "<p> Email : " + data.email + "</p>"
             );
 
