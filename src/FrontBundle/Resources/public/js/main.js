@@ -239,7 +239,7 @@ $(document).ready(function () {
 
             "<h4>Temps de trajet  " + $(this).find(".time").text() + " </h4> " +
 
-            "<a id='add_checkout' class='price button' href='http://commander.io/app_dev.php/checkout/" + parseInt(id) + "'>Ajouter au panier </a>" +
+            "<a id='add_checkout' class='price button' href='http://commander.io/checkout/" + parseInt(id) + "'>Ajouter au panier </a>" +
 
             "</div>");
 
@@ -249,7 +249,7 @@ $(document).ready(function () {
 
         var id_voyage = localStorage.getItem('id_voyage');
 
-        window.location.href = 'http://commander.io/app_dev.php/checkout/' + id_voyage;
+        window.location.href = 'http://commander.io/checkout/' + id_voyage;
 
     });
 
